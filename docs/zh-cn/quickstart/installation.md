@@ -5,7 +5,7 @@
 
 [下载](https://download.visualstudio.microsoft.com/download/pr/acff3e6a-d8d6-4c2a-a0cb-1853b58055cc/7910b2a414caa17d30b0cb82583cb542/dotnet-sdk-5.0.101-win-x64.exe)
 
-### ## 检查下载是否正确
+## 检查下载是否正确
 
 当下载完成后，创建一个命令行，运行以下命令
 
