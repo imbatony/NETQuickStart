@@ -22,7 +22,7 @@ cd fisrtapp
 
 
 
-``` c#
+``` csharp
 using System;
 
 namespace myApp
@@ -55,7 +55,7 @@ dotnet run
 
 通过任意文件编辑器，例如Notepad 或者 Visual Studio Code。
 
-``` c#
+``` csharp
 using System;
 
 namespace myApp

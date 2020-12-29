@@ -9,6 +9,14 @@
 - razor应用开发
     - [概述](zh-cn/razor/intro.md)
     - [入门](zh-cn/razor/first.md)
+    - [向 Razor Pages 应用添加模型](zh-cn/razor/addModel.md)
+    - [基架（生成）Razor Pages](zh-cn/razor/scalfold.md)
+    - [使用数据库](zh-cn/razor/usedb.md)
+    - [更新 Razor Pages](zh-cn/razor/updatePage.md)
+    - [添加搜索](zh-cn/razor/addSearch.md)
+    - [添加新字段](zh-cn/razor/addField.md)
+    - [添加验证](zh-cn/razor/addValidation.md)
+    - [添加Filter](zh-cn/razor/addFilter.md)
 - blazor应用开发
 - dotnet命令行常用命令
     - [new](zh-cn/cmd/new.md)

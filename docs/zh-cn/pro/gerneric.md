@@ -4,7 +4,7 @@
 
 我们知道想要一个类相同名称的方法，如果仅参数类型不同，那么要重载。重载会有很多冗余的代码。在. NET1.0 时代也可以不用重载，那就是参数类型直接用 Object 类型，那么任何类型都能传进去了，但是会有装箱拆箱操作，影响性能。
 
-``` C#
+``` csharp
 public static void Show(string sValue)
 {
     Console.WriteLine(sValue);
@@ -41,20 +41,19 @@ List<T> 是在使用时定义类型，JIT 编译器解析时动态的生成，�
 
 常见的泛型方法就是在方法后面带上**`<T>(T param)，“T”可以随便定义，只要不是关键保留字就行`**，默认约定俗成都用 T，此处就代表你定义了一个 T 类，然后后面参数就可以用这个 T 类型。（如果把鼠标光标放在参数类型 T 上，然后 F12 转到定义就会定位到前面这个 T。）**`这样就可以用一个方法，满足不同的参数类型，去做相同的事情`**。把参数的类型申明推迟到调用时，延迟声明。后面框架中也会有很多这种**`延迟思想`**，延迟以达到更好的扩展。
 
-```
+```csharp
 public static void Show<T>(T tValue)
 {
     Console.WriteLine(tValue);
 }
 CommonMethod.Show<int>(123);
-复制代码
 ```
 
 #### 2、泛型类、泛型接口
 
 创建方法类似，语法一样 <T>。用的最多的 List<T > 就是很典型的泛型类，**`用来满足不同的具体类型，完成相同的事情`**。
 
-```
+```csharp
 public class GenericClass<T>
 {
     public T _T;
@@ -78,19 +77,18 @@ public interface IGenericInterface<T>
 
 ![](https://user-gold-cdn.xitu.io/2019/10/26/16e07fbf64385841?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-```
+``` csharp
 public static void Show<T>(T tValue) where T : People
 {
     Console.WriteLine(tValue.Name);
 }
-复制代码
 ```
 
 #### 3、协变逆变
 
 协变逆变就是对参数和返回值的类型进行转换。协变用一个派生更大的类去代替某个类型（小代替大），其实就是设计原则的里氏替换原则，比如狗继承自动物，那么任何用动物作为参数类型的地方，调用时都可以用狗代替。逆变就是反过来。
 
-``` C#
+``` csharp
 //协变
 public void ShowName(Animal animal)
 {
@@ -101,7 +99,7 @@ ShowName(dog);
 
 泛型接口的协变逆变。如果泛型类型用了 out 关键字标注，泛型接口就是协变的。这也意味着返回类型只能是 T。如果用了 in 关键字标注，就是逆变，只能把泛型类型 T 用作方法的输入。这块很绕，实际使用非常少。
 
-``` C#
+``` csharp
 //一堆狗肯定是一堆动物啊，为啥就不能这么做呢？下面这句编译不通过
 //前后两个类型是没有父子关系的
 List<Animal> animalLst = new List<Dog>();
@@ -175,7 +173,7 @@ set.SetData("nihao");
 
 **`泛型类的静态成员只能在类的一个实例中共享`**。运行时泛型类的实例已经指定了具体类型，每一个不同的泛型类实例共享静态成员，利用这个特点就可以做缓存。**`每一个不同的T缓存一个版本数据`**。如例子所示，当第一次指定不同的 T 时，会重新构造，再次有相同的类型时，就不会进入静态构造函数了。相当于为缓存了多个版本的静态成员。比如在各个数据库实体类需要有一些增删改查的 SQL 时，就可以利用用泛型特性，每一个数据库实体类都会缓存一份自己的增删改查 SQL。
 
-``` C#
+``` csharp
 public class GenericCache<T>
 {
     static GenericCache()

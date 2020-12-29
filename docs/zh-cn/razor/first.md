@@ -15,6 +15,7 @@
 ![主页或 Index 页](../_media/home5.png)
 
 1. 启动 Visual Studio 并选择“创建新项目”.
+
    ![从“启动”窗口创建新项目](../_media/start-window-create-new-project.png)
 
 1. 在“创建新项目”对话框中，选择“ASP.NET Core Web 应用程序”，然后选择“下一步”  。
@@ -46,7 +47,7 @@
 
 1. 运行以下命令：
 
-   ```dotnetcli
+   ```bash
    dotnet new webapp -o RazorPagesMovie
    code -r RazorPagesMovie
    ```
