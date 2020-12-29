@@ -4,8 +4,11 @@
     - [第一个程序](zh-cn/quickstart/firstapp.md)
     - [创建一个Web程序](zh-cn/quickstart/webapp.md)
     - [创建一个Blazor程序](zh-cn/quickstart/blazor.md)
-
+- ASP.NET Core MVC 入门
+    - [概述](zh-cn/mvc/intro.md)
 - razor应用开发
+    - [概述](zh-cn/razor/intro.md)
+    - [入门](zh-cn/razor/first.md)
 - blazor应用开发
 - dotnet命令行常用命令
     - [new](zh-cn/cmd/new.md)
