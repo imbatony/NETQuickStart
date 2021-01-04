@@ -18,6 +18,9 @@
     - [添加验证](zh-cn/razor/addValidation.md)
     - [添加Filter](zh-cn/razor/addFilter.md)
 - blazor应用开发
+    - [概述](zh-cn/blazor/intro.md)
+    - [生成 Blazor 待办事项列表应用](zh-cn/blazor/todolist.md)
+
 - dotnet命令行常用命令
     - [new](zh-cn/cmd/new.md)
 - 详解
