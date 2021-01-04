@@ -27,7 +27,7 @@
 
 2. 使用以下命令向 `Pages` 文件夹中的应用添加一个新的 `Todo` Razor 组件：
 
-   ```dotnetcli
+   ```bash
    dotnet new razorcomponent -n Todo -o Pages
    ```
 
@@ -145,9 +145,8 @@
     @code {
         private IList<TodoItem> todos = new List<TodoItem>();
         private string newTodo;
-    
-        ...
     }
+    
     ```
 
     
